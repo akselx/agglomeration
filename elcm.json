@@ -1,0 +1,19 @@
+{
+  "table": "dset.fetch('nets')",
+  "model": "locationchoicemodel",
+  "modeldependencies": "nrh.json",
+  "table_sim": "dset.fetch('nets')[dset.fetch('nets').lastmove>2007]",
+  "alternatives":"dset.nodes.reset_index(level=0,drop=True)",
+  "sample_size": 100,
+  "dep_var": "_node_id0",
+  "segment": ["naics11cat"],
+  "ind_vars": [
+    "yoga","restaurants","sushi","chocolate","groceries","florists","fastfood","cafes","spas","tattoo","shopping","outdoors","tourism","bars","entertainment","pawn","liquor","bookstores","concerts"
+  ],
+  "output_names": [
+    "coeff-nonreslocation-rent-%s.csv",
+    "NON-RESIDENTIAL LOCATION CHOICE MODELS BY NAICS SECTOR (%s)",
+    "nonreslocation_%s",
+    "firms_building_ids"
+  ]
+}

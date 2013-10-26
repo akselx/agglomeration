@@ -1,0 +1,39 @@
+{
+  "model": "networks",
+  "writetotmp": "nodes",
+  "networks": {
+    "filenames": ["osm_bayarea.jar"],
+    "factors": [1.0],
+    "maxdistances": [2000],
+    "twoway": [1]
+  },
+  "var_lib": {
+    "restaurants": "NETWORKS.accvar(dset.filter_pois('Restaurants'),2000).apply(np.log1p)",
+    "sushi": "NETWORKS.accvar(dset.filter_pois('Sushi'),2000)",
+    "cheese": "NETWORKS.accvar(dset.filter_pois('Cheese'),2000)",
+    "chocolate": "NETWORKS.accvar(dset.filter_pois('Chocolate'),2000)",
+    "groceries": "NETWORKS.accvar(dset.filter_pois('Groceries'),2000).apply(np.log1p)",
+    "wholefoods": "NETWORKS.accvar(dset.filter_pois('Whole Foods Market',field='name'),2000)",
+    "florists": "NETWORKS.accvar(dset.filter_pois('Florists'),2000)",
+    "farmersmarkets": "NETWORKS.accvar(dset.filter_pois('Farmers'),2000)",
+    "fastfood": "NETWORKS.accvar(dset.filter_pois('Fast Food'),2000)",
+    "cafes": "NETWORKS.accvar(dset.filter_pois('Cafes'),2000).apply(np.log1p)",
+    "spas": "NETWORKS.accvar(dset.filter_pois('Beauty & Skin Care'),2000).apply(np.log1p)",
+    "tattoo": "NETWORKS.accvar(dset.filter_pois('Tattooing'),2000)",
+    "shopping": "NETWORKS.accvar(dset.filter_pois('Novelty'),2000).apply(np.log1p)",
+    "malls": "NETWORKS.accvar(dset.filter_pois('Malls'),2000).apply(np.log1p)",
+    "outdoors": "NETWORKS.accvar(dset.filter_pois('Outdoor Recreation'),2000)",
+    "historical": "NETWORKS.accvar(dset.filter_pois('Historical Sites'),2000)",
+    "tourism": "NETWORKS.accvar(dset.filter_pois('Tourist Attractions'),2000)",
+    "bars": "NETWORKS.accvar(dset.filter_pois('Bars'),2000)",
+    "entertainment": "NETWORKS.accvar(dset.filter_pois('Entertainment'),2000).apply(np.log1p)",
+    "pawn": "NETWORKS.accvar(dset.filter_pois('Pawn Shops'),2000)",
+    "starbucks": "NETWORKS.accvar(dset.filter_pois('Starbucks',field='name'),2000)",
+    "liquor": "NETWORKS.accvar(dset.filter_pois('Beer'),2000)",
+    "yoga": "NETWORKS.accvar(dset.filter_pois('Yoga'),2000)",
+    "concerts": "NETWORKS.accvar(dset.filter_pois('Concert Halls'),2000)",
+    "bookstores": "NETWORKS.accvar(dset.filter_pois('Bookstores'),2000)"
+  },
+  "ind_vars": ["malls","wholefoods","starbucks","yoga","restaurants","sushi","farmersmarkets","cheese","chocolate","groceries","florists","fastfood","cafes","spas","tattoo","shopping","outdoors","historical","tourism","bars","entertainment","pawn","liquor","yoga","bookstores","concerts"],
+  "show": true
+}
