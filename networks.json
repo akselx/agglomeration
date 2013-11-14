@@ -1,6 +1,6 @@
 {
   "model": "networks",
-  "writetotmp": "nodes",
+  "writetotmp": "networks",
   "networks": {
     "filenames": ["osm_bayarea.jar"],
     "factors": [1.0],
