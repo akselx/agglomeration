@@ -1,0 +1,19 @@
+{
+  "table": "dset.fetch('nets')",
+  "model": "locationchoicemodel",
+  "modeldependencies": "nrh.json",
+  "table_sim": "dset.fetch('nets')[dset.fetch('nets').lastmove>2007]",
+  "alternatives":"dset.tester(2010).join(dset.compute_nonres_building_proportions(2010)).join(dset.networks.reset_index(level=0))",
+  "sample_size": 100,
+  "dep_var": "_node_id0",
+  "segment": ["naics11cat"],
+  "ind_vars": [
+    "averageweightedrent","yoga","restaurants","sushi","chocolate","groceries","fastfood","cafes","entertainment","pawn","liquor"
+  ],
+  "output_names": [
+    "coeff-nonreslocation-rent-%s.csv",
+    "NON-RESIDENTIAL LOCATION CHOICE MODELS BY NAICS SECTOR (%s)",
+    "nonreslocation_%s",
+    "firms_building_ids"
+  ]
+}
